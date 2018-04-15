@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:5rem">
+                <div class="card-body">
+                    <a href="/admin">
+                    <h5 class="card-title">Data Entry</h5>
+                    <p class="card-text">Quickly enter some data for the accounts and the underlying risk for the accounts.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:5rem">
+                <div class="card-body">
+                    <a href="/account">
+                    <h5 class="card-title">Account Analysis</h5>
+                        <p class="card-text">Dashboard type view for the complete account analysis. This is User Mode</p>
+                    </a>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

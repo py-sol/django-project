@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:1rem">
+                <div class="card-body text-center">
+                    <h3 class="card-title"> {{ child_account_count }} </h3>
+                    <p class="card-text">Child Accounts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:1rem">
+                <div class="card-body text-center">
+                    <h3 class="card-title"> {{ child_account_won }} </h3>
+                        <p class="card-text">Accounts Won</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:1rem">
+                <div class="card-body text-center">
+                    <h3 class="card-title"> {{ high_potential_count }} </h3>
+                        <p class="card-text">High Potential Accounts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card border-primary mb-3" style="max-width: 18rem; margin:1rem">
+                <div class="card-body text-center">
+                    <h3 class="card-title"> {{ high_pipeline_count }} </h3>
+                        <p class="card-text">High Pipeline Accounts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <p style="margin-left:5rem"><b>*</b> All the account reference are for child accounts.</p>
+    </div>
+
+    <div class="row bg-primary" style="padding: 1rem;">
+        <button type="button" class="btn btn-light float-right" style="margin: 0.5rem 0.5rem 0.5rem 50rem;">High Pipeline</button>
+        <button type="button" class="btn btn-light float-right" style="margin: 0.5rem;">High Potential</button>
+    </div>
+
+    <div class="row bg-primary text-white" style="padding: 1rem;">
+        Account Name: {{ account_name }} <br>
+        Customer Name: {{ customer_name }}
+    </div>
+
+    <div class="row">
+    <div class="row card border-primary" style="width: 100%; margin: 0rem;">
+        <div class="col-sm-4" style="padding: 5rem;">Account Risk (s)</div>
+        <div class="col-sm-8" style="padding: 2rem">
+            <ul>
+                {% for risk in account_risk %}
+                <li style="margin: 1rem;"> {{ risk }} </li>
+                {% endfor %}
+            </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+{% endblock %}
