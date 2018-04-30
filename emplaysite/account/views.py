@@ -53,7 +53,7 @@ def get_account_details(account_id):
     print (high_potential_count)
 
     # Count the number of distinct child accounts with pipeline=’HP’
-    high_pipeline_count = 4 # len(Account.objects.filter(account_id=account_id, pipeline='HP').distinct('account_child_id'))
+    high_pipeline_count = len(Account.objects.filter(account_id=account_id, pipeline='HP').distinct('account_child_id'))
 
     return {
         "child_account_count": child_account_count,
